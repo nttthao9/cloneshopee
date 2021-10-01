@@ -1,0 +1,55 @@
+.hot-search {
+  margin-top: 2rem;
+}
+.hot-search-container {
+  background-color: var(--white-color);
+}
+.hot-search-title {
+  color: var(--main-color);
+}
+.hot-list {
+  padding: 1rem;
+}
+.hot-item {
+  margin-left: 1rem;
+  padding: unset;
+  display: flex;
+  flex-direction: column;
+}
+.hot-item-link {
+  display: block;
+}
+.hot-number {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 5px 0;
+  margin-bottom: 2rem;
+}
+.hot-product {
+  color: #8e8e8e;
+  font-size: 1.8rem;
+  text-transform: capitalize;
+  display: block;
+  text-align: center;
+}
+.hot-desc {
+  height: calc(100% - 25px);
+  margin-top: -3rem;
+}
+.top-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 25px;
+}
+.hot-search-next {
+  transform: translate(60%, -10rem);
+  transition: transform 0.2s linear;
+}
+.hot-list:hover .hot-search-next {
+  transform: translate(60%, -10rem) scale(1.6);
+}

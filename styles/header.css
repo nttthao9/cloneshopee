@@ -1,60 +1,3 @@
-:root {
-  --main-color: #f6432e;
-  --second-color: #fe6232;
-  --white-color: white;
-  --input-color: #757575;
-  --gold-color: #ffd839;
-}
-html {
-  box-sizing: border-box;
-  font-size: 62.5%;
-}
-* {
-  margin: 0;
-  padding: 0;
-}
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-input,
-textarea,
-select,
-button {
-  outline: none;
-  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue',
-    Helvetica, Arial, 'Lucida Grande', sans-serif;
-}
-input {
-  line-height: normal;
-}
-label,
-button {
-  cursor: pointer;
-}
-a {
-  text-decoration: none;
-}
-img {
-  display: block;
-  max-width: 100%;
-}
-body {
-  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue',
-    Helvetica, Arial, 'Lucida Grande', sans-serif;
-  line-height: 1;
-  font-size: 1.6rem;
-}
-
-.wrapper {
-  height: 1000px;
-  max-width: 1920px;
-  margin: 0 auto;
-  background: rgba(221, 219, 219, 0.5)
-    url('https://cf.shopee.vn/file/5a6d6505b195a28c76db09dcabaae569') center top /
-    100% no-repeat;
-}
 .header {
   position: fixed;
   top: 0;
@@ -68,11 +11,7 @@ body {
   );
   margin-bottom: 3rem;
 }
-.container {
-  max-width: 1230px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
+
 .navigation {
   padding: 1rem 0;
   display: flex;
@@ -336,10 +275,13 @@ body {
   visibility: visible;
   transform: scale(1);
 }
+.cart-link {
+  display: block;
+  margin-top: 2.5rem;
+}
 .cart-icon {
   color: var(--white-color);
   font-size: 2rem;
-  margin-top: 2.5rem;
 }
 .search-bar {
   display: flex;
@@ -365,7 +307,7 @@ body {
   right: 4px;
   border-radius: inherit;
 }
-.searh-icon {
+.search-icon {
   color: var(--white-color);
   font-size: 1.7rem;
 }
@@ -381,206 +323,51 @@ body {
   text-transform: capitalize;
   opacity: 0.9;
 }
-.main {
-  /* background-color: rgb(221, 219, 219); */
-  background: rgba(221, 219, 219, 0.5)
-    url('https://cf.shopee.vn/file/5a6d6505b195a28c76db09dcabaae569') center top /
-    100% no-repeat;
+.user-icon {
+  display: none;
 }
-/*Section banner*/
-
-.banner {
-  margin-top: 5rem;
-  padding-top: 10rem;
-  margin-bottom: 1rem;
-  background: url('https://cf.shopee.vn/file/5a6d6505b195a28c76db09dcabaae569')
-    center top / 100% no-repeat;
-}
-.promo {
-  display: flex;
-  justify-content: space-between;
-}
-.slider-promo {
-  margin-right: 8px;
-}
-.slider-list {
-  position: relative;
-}
-.slider-prev {
-  padding: 25px 15px;
-  background-color: rgba(0, 0, 0, 0.2);
-  position: absolute;
-  top: 100px;
-  left: 0;
-  cursor: pointer;
-}
-.slider-next {
-  padding: 25px 15px;
-  background-color: rgba(0, 0, 0, 0.2);
-  position: absolute;
-  top: 100px;
-  right: 0;
-  cursor: pointer;
-}
-
-.button-prev,
-.button-next {
-  color: var(--white-color);
-  font-size: 2.8rem;
-  cursor: pointer;
-}
-.circle-list {
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: -1rem;
-}
-.circle-item {
-  margin-left: 1rem;
-}
-.circle-icon {
-  font-size: 8px;
-  color: #e8e8e8;
-}
-.fixed-promo {
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.fixed-promo img {
-  height: 100%;
-}
-.image-top {
-  margin-bottom: 8px;
-}
-
-/* category */
-.category {
-  margin-bottom: 2rem;
-}
-.category-list {
-  background-color: var(--white-color);
-  list-style-type: none;
-  /* display: grid;
-  grid-template-columns: repeat(10, 1fr); */
-  display: flex;
-  justify-content: space-evenly;
-}
-.category-item {
-  width: calc(100% / 10);
-  padding: 20px 10px;
-  transition: transform 0.25s linear;
-}
-.category-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  color: #333;
-  font-size: 1.4rem;
-  text-transform: capitalize;
-  text-align: center;
-}
-.category-item:hover {
-  transform: translateY(-5px);
-}
-.category-image {
-  width: 50px;
-  height: 50px;
-}
-@media screen and(max-width: 767px) {
-  .navbar-link {
-    font-size: 1rem;
+@media only screen and (max-width: 1279px) {
+  .navigation,
+  .header-logo,
+  .key-search,
+  .noti-cart {
+    display: none;
   }
-}
-.gift {
-  margin-bottom: 2rem;
-}
-.top-sale {
-  background-color: #ffebda;
-  display: flex;
-  justify-content: space-between;
-}
-.product-best-sale {
-  width: calc(50% - 1rem);
-  border-left: 1.5rem solid var(--main-color);
-}
-.branch-best-sale {
-  width: calc(50% - 1rem);
-  border-right: 1.5rem solid var(--main-color);
-}
-.title {
-  display: flex;
-  justify-content: space-between;
-  padding: 2rem;
-}
-.best-sale-title {
-  text-transform: uppercase;
-  color: var(--main-color);
-  font-size: 1.6rem;
-  font-weight: 100;
-}
-.see-more {
-  font-size: 1.3rem;
-  color: var(--main-color);
-}
-.product-list {
-  background-color: #fff;
-  display: flex;
-  align-items: center;
-}
-.product-item {
-  width: calc(100% / 3);
-  background-color: #fff;
-  padding: 2rem;
-  border-right: 0.2px solid var(--main-color);
-  position: relative;
-}
-.product-item:last-child {
-  border: none;
-}
-.product-item .product-image {
-  -o-object-fit: cover;
-  object-fit: cover;
-  margin-bottom: 2rem;
-}
-.product-price {
-  display: block;
-  color: var(--main-color);
-  font-size: 1.8rem;
-  text-align: center;
-}
-.discount {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 50px;
-  height: 45px;
-  background-color: var(--gold-color);
-}
-.discount::after {
-  content: '';
-  position: absolute;
-  bottom: -8px;
-  left: 0;
-  border-color: transparent var(--gold-color);
-  border-style: solid;
-  border-width: 0 25px 8px;
-}
-.price-discount {
-  padding-top: 5px;
-  display: block;
-  text-align: center;
-  text-transform: uppercase;
-  color: var(--white-color);
-}
-.price-discount span {
-  color: var(--main-color);
-  display: block;
-  margin-bottom: 2px;
+  .header {
+    position: unset;
+    margin-bottom: unset;
+  }
+  .header-cart {
+    flex: unset;
+  }
+  .cart-link {
+    margin-top: unset;
+  }
+  .header-search {
+    margin-right: unset;
+    width: 80%;
+    padding-top: 1rem;
+  }
+  .user-icon {
+    display: block;
+    color: white;
+    font-size: 2rem;
+  }
+  .header-main {
+    justify-content: space-between;
+    align-items: center;
+    margin-top: unset;
+  }
+  .btn-search {
+    background-color: transparent;
+    left: 0;
+    padding: 8px 10px;
+  }
+
+  .search-icon {
+    color: #bebebe;
+  }
+  .search-input {
+    padding-left: 3.5rem;
+  }
 }

@@ -1,0 +1,27 @@
+:root {
+  --main-color: #f6432e;
+  --second-color: #fe6232;
+  --white-color: white;
+  --input-color: #757575;
+  --gold-color: #ffd839;
+  --font-size: calc(1.3rem + 3vw);
+}
+body {
+  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue',
+    Helvetica, Arial, 'Lucida Grande', sans-serif;
+  line-height: 1;
+  font-size: 1.6rem;
+  padding-bottom: 5rem;
+}
+.wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+  background: rgba(221, 219, 219, 0.5)
+    url('https://cf.shopee.vn/file/5a6d6505b195a28c76db09dcabaae569') center top /
+    100% no-repeat;
+}
+.container {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 15px;
+}

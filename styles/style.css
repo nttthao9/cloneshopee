@@ -1,0 +1,104 @@
+.main {
+  background: rgba(221, 219, 219, 0.5)
+    url('https://cf.shopee.vn/file/5a6d6505b195a28c76db09dcabaae569') center top /
+    100% no-repeat;
+}
+
+/* category */
+
+.gift {
+  margin-bottom: 2rem;
+}
+.top-sale {
+  background-color: #ffebda;
+  display: flex;
+  justify-content: space-between;
+}
+.product-best-sale {
+  width: calc(50% - 1rem);
+  border-left: 1.5rem solid var(--main-color);
+}
+.branch-best-sale {
+  width: calc(50% - 1rem);
+  border-right: 1.5rem solid var(--main-color);
+}
+.title {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+.best-sale-title {
+  text-transform: uppercase;
+  color: var(--main-color);
+  font-size: 1.6rem;
+  font-weight: 100;
+}
+.see-more {
+  font-size: 1.3rem;
+  color: var(--main-color);
+}
+.product-list {
+  background-color: #fff;
+  display: flex;
+}
+.product-item {
+  width: calc(100% / 3);
+  background-color: #fff;
+  padding: 2rem;
+  border-right: 0.2px solid var(--main-color);
+  position: relative;
+}
+.product-item:last-child {
+  border: none;
+}
+.product-image {
+  -o-object-fit: cover;
+  object-fit: cover;
+  margin-bottom: 2rem;
+}
+.product-price {
+  display: block;
+  color: var(--main-color);
+  font-size: 1.8rem;
+  text-align: center;
+}
+.discount {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50px;
+  height: 45px;
+  background-color: var(--gold-color);
+}
+.discount::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  border-color: transparent var(--gold-color);
+  border-style: solid;
+  border-width: 0 25px 8px;
+}
+.price-discount {
+  padding-top: 5px;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--white-color);
+}
+.price-discount span {
+  color: var(--main-color);
+  display: block;
+  margin-bottom: 2px;
+}
+.branch-advertisement {
+  display: flex;
+}
+.branch-image {
+  flex: 1;
+}
+@media (max-width: 1279px) {
+  .gift {
+    display: none;
+  }
+}

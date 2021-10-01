@@ -1,0 +1,88 @@
+.banner {
+  margin-top: 5rem;
+  padding-top: 10rem;
+  margin-bottom: 1rem;
+  background: url('https://cf.shopee.vn/file/5a6d6505b195a28c76db09dcabaae569')
+    center top / 100% no-repeat;
+}
+.promo {
+  display: flex;
+  justify-content: space-between;
+}
+.slider-promo {
+  margin-right: 8px;
+}
+.slider-list {
+  position: relative;
+}
+.slider-prev {
+  padding: 25px 15px;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 100px;
+  left: 0;
+  cursor: pointer;
+}
+.slider-next {
+  padding: 25px 15px;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 100px;
+  right: 0;
+  cursor: pointer;
+}
+
+.button-prev,
+.button-next {
+  color: var(--white-color);
+  font-size: 2.8rem;
+  cursor: pointer;
+}
+.circle-list {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -1rem;
+}
+.circle-item {
+  margin-left: 1rem;
+}
+.circle-icon {
+  font-size: 8px;
+  color: #e8e8e8;
+}
+.fixed-promo {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.fixed-promo img {
+  height: 100%;
+}
+.image-top {
+  margin-bottom: 8px;
+}
+@media only screen and (max-width: 1279px) {
+  .banner {
+    margin-top: unset;
+    padding-top: 8rem;
+    background: var(--second-color);
+    margin-bottom: unset;
+  }
+  .fixed-promo,
+  .slider-next,
+  .slider-prev {
+    display: none;
+  }
+  .slider-link {
+    width: 500px;
+    height: 30rem;
+    background: url('https://cf.shopee.sg/file/19bd7d3b32662539320f31b4ef5713eb')
+      no-repeat center / cover;
+  }
+}
