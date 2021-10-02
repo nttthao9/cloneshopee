@@ -326,7 +326,10 @@
 .user-icon {
   display: none;
 }
-@media only screen and (max-width: 1279px) {
+.background {
+  display: none;
+}
+@media only screen and (max-width: 1024px) {
   .navigation,
   .header-logo,
   .key-search,
@@ -336,6 +339,11 @@
   .header {
     position: unset;
     margin-bottom: unset;
+    background-image: linear-gradient(
+      to bottom,
+      var(--blue-color),
+      var(--light-blue)
+    );
   }
   .header-cart {
     flex: unset;
@@ -346,7 +354,6 @@
   .header-search {
     margin-right: unset;
     width: 80%;
-    padding-top: 1rem;
   }
   .user-icon {
     display: block;
@@ -357,6 +364,7 @@
     justify-content: space-between;
     align-items: center;
     margin-top: unset;
+    padding: 1rem 2rem;
   }
   .btn-search {
     background-color: transparent;
@@ -369,5 +377,8 @@
   }
   .search-input {
     padding-left: 3.5rem;
+  }
+  .background {
+    display: block;
   }
 }

@@ -11,6 +11,11 @@
   left: 0;
 }
 .suggest-header {
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 10;
+  top: 20%;
+  width: 100%;
   background-color: var(--white-color);
   padding-bottom: unset;
 }
@@ -21,25 +26,39 @@
   border-bottom: 5px solid var(--main-color);
 }
 .product-name {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  padding: 0 1rem;
+  margin-top: -1rem;
+  height: 11%;
+  line-height: 1.2;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  font-size: 1.3rem;
 }
 .suggest-list {
   background-color: unset;
+  margin-left: -1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
 }
 .suggest-item {
-  width: calc(100% / 6);
+  --item-count: 6;
+  width: calc(100% / (var(--item-count)) - 1rem);
   cursor: pointer;
   position: relative;
-  border-right: 1px solid var(--main-color);
+  border: 1px solid transparent;
+  transition: all 0.1s linear;
+  padding: 0;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
 }
 .product-desc {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 2rem;
+  padding: 1rem;
 }
 .suggest-price {
   font-size: 1.7rem;
@@ -65,18 +84,85 @@
   border-style: solid;
   border-width: 0 20px 8px;
 }
+.suggest-item:hover {
+  transform: translateY(-2px);
+  border-color: var(--main-color);
+}
+.suggest-item:hover .product-equal {
+  opacity: 1;
+  visibility: visible;
+}
 .product-equal {
   opacity: 0;
-  overflow: hidden;
-  width: 100%;
+  visibility: hidden;
+  width: calc(100% + 2px);
   position: absolute;
-  bottom: -5%;
-  left: 0;
+  bottom: -6%;
+  left: -1px;
   background-color: var(--main-color);
   text-align: center;
-  padding: 5px 0;
+  padding: 10px 0;
+  transition: all 0.1s linear;
+  z-index: 33;
 }
 .equal-text {
   font-size: 1.4rem;
   color: var(--white-color);
+}
+.mall {
+  position: absolute;
+  top: 10px;
+  left: -5px;
+  width: 3rem;
+  height: 1.5rem;
+  background-color: var(--shopmall-color);
+  border-radius: 0 2px 2px 0;
+}
+.mall::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  transform: translateY(5px);
+  z-index: -1;
+  border-right: 5px solid #7d0110;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+.mall-text {
+  padding: 3px;
+  font-size: 1.2rem;
+  color: var(--white-color);
+  text-transform: capitalize;
+  text-align: center;
+  display: block;
+  font-weight: 100;
+}
+.sponser {
+  padding: 3px 5px;
+  border-radius: 3px;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  background-color: rgba(170, 172, 174, 0.7);
+}
+.sponser-text {
+  color: var(--white-color);
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+.btn-see-more {
+  border: 0;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  width: 30%;
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+  text-transform: capitalize;
+  color: #333;
+  background-color: var(--white-color);
+  font-size: 1.4rem;
+}
+.btn-see-more:hover {
+  background-color: #eee;
 }

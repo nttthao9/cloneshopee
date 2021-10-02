@@ -68,7 +68,7 @@
   margin-bottom: 8px;
 }
 @media only screen and (max-width: 1279px) {
-  .banner {
+  /* .banner {
     margin-top: unset;
     padding-top: 8rem;
     background: var(--second-color);
@@ -84,5 +84,8 @@
     height: 30rem;
     background: url('https://cf.shopee.sg/file/19bd7d3b32662539320f31b4ef5713eb')
       no-repeat center / cover;
+  } */
+  .banner {
+    display: none;
   }
 }

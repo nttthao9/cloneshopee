@@ -27,8 +27,6 @@
   padding-top: 5px;
 }
 .flash-sale-header {
-  display: flex;
-  padding: 2rem;
   align-items: center;
 }
 .flash-sale-title {
@@ -38,10 +36,7 @@
 .flash-sale-price {
   font-size: 2rem;
 }
-.see-all {
-  margin-left: auto;
-}
-.see-all * {
+.see-more-icon {
   color: var(--main-color);
 }
 .see-all-link {
@@ -84,4 +79,20 @@
 }
 .flash-sale-list:hover .flash-sale-next {
   transform: translate(50%, -13rem) scale(1.6);
+}
+.flash-sale-mobile {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .flash-sale {
+    display: none;
+  }
+  .flash-sale-mobile {
+    display: block;
+  }
+  .flash-sale-item {
+    --item-count: 4;
+    width: calc(100% / var(--item-count));
+    margin-left: 1.5rem;
+  }
 }

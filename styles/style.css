@@ -1,7 +1,9 @@
 .main {
-  background: rgba(221, 219, 219, 0.5)
+  background: #f5f5f5
     url('https://cf.shopee.vn/file/5a6d6505b195a28c76db09dcabaae569') center top /
     100% no-repeat;
+  padding-bottom: 5rem;
+  border-bottom: 4px solid var(--main-color);
 }
 
 /* category */
@@ -23,9 +25,7 @@
   border-right: 1.5rem solid var(--main-color);
 }
 .title {
-  display: flex;
   justify-content: space-between;
-  padding: 2rem;
 }
 .best-sale-title {
   text-transform: uppercase;
@@ -42,25 +42,26 @@
   display: flex;
 }
 .product-item {
-  width: calc(100% / 3);
+  --item-count: 3;
+  width: calc(100% / (var(--item-count)));
   background-color: #fff;
   padding: 2rem;
-  border-right: 0.2px solid var(--main-color);
+  border-right: 0.2px solid rgba(238, 77, 45, 0.3);
   position: relative;
 }
-.product-item:last-child {
-  border: none;
+.last-item {
+  border-right: unset;
 }
 .product-image {
   -o-object-fit: cover;
   object-fit: cover;
-  margin-bottom: 2rem;
 }
 .product-price {
   display: block;
   color: var(--main-color);
   font-size: 1.8rem;
   text-align: center;
+  margin: 1rem 0 2rem;
 }
 .discount {
   position: absolute;
@@ -91,14 +92,50 @@
   display: block;
   margin-bottom: 2px;
 }
-.branch-advertisement {
-  display: flex;
+.branch-best-sale-mobile,
+.product-best-sale-mobile,
+.collections-best-sale {
+  display: none;
 }
-.branch-image {
-  flex: 1;
-}
-@media (max-width: 1279px) {
+@media (max-width: 1024px) {
   .gift {
     display: none;
+  }
+  .top-sale {
+    flex-direction: column;
+  }
+  .product-best-sale-mobile,
+  .collections-best-sale,
+  .branch-best-sale-mobile,
+  .branch-best-sale {
+    width: 100%;
+    border-left: 1.4rem solid var(--main-color);
+    border-right: 1.4rem solid var(--main-color);
+  }
+  .product-item {
+    --item-count: 6;
+    width: calc(100% / (var(--item-count)));
+    padding: 0;
+  }
+  .discount {
+    width: 35px;
+    height: 35px;
+  }
+  .discount:after {
+    bottom: -6px;
+    border-width: 0 17.5px 8px;
+  }
+  .price-discount {
+    font-size: 1.2rem;
+  }
+  .product-best-sale,
+  .branch-best-sale {
+    display: none;
+  }
+  .product-best-sale-mobile,
+  .branch-best-sale-mobile,
+  .collections-best-sale {
+    display: block;
+    width: 100%;
   }
 }

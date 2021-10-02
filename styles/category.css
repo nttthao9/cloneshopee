@@ -34,7 +34,16 @@
 .advertisement {
   display: none;
 }
-@media only screen and (max-width: 1279px) {
+.branch-list {
+  display: none;
+}
+.branch-image {
+  flex-grow: 1;
+  -o-object-fit: cover;
+  object-fit: cover;
+  cursor: pointer;
+}
+@media only screen and (max-width: 1024px) {
   .category {
     background-color: var(--main-color);
     margin-bottom: unset;
@@ -58,9 +67,15 @@
   }
   .category,
   .category-list {
-    background-color: var(--main-color);
+    background-color: var(--blue-color);
   }
   .advertisement {
     display: block;
+  }
+  .branch-list {
+    display: block;
+  }
+  .branch-advertisement {
+    display: flex;
   }
 }

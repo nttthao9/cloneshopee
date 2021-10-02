@@ -4,7 +4,10 @@
   --white-color: white;
   --input-color: #757575;
   --gold-color: #ffd839;
-  --font-size: calc(1.3rem + 3vw);
+  --shopmall-color: #d62037;
+  --item-count: 1;
+  --blue-color: #2fb6ee;
+  --light-blue: #90d8fa;
 }
 body {
   font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue',
@@ -16,12 +19,44 @@ body {
 .wrapper {
   max-width: 1920px;
   margin: 0 auto;
-  background: rgba(221, 219, 219, 0.5)
-    url('https://cf.shopee.vn/file/5a6d6505b195a28c76db09dcabaae569') center top /
-    100% no-repeat;
 }
 .container {
   max-width: 1230px;
   margin: 0 auto;
   padding: 0 15px;
+}
+.next {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white-color);
+  right: 0;
+  bottom: 0;
+}
+.heading {
+  display: flex;
+  padding: 2rem;
+  justify-content: space-between;
+}
+.list {
+  display: flex;
+}
+.item {
+  position: relative;
+}
+@media (max-width: 1024px) {
+  .container {
+    padding: 0;
+  }
+
+  div.next {
+    display: none;
+  }
+  div.heading {
+    padding: 3rem 2rem;
+  }
 }

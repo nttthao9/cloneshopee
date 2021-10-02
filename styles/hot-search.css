@@ -50,6 +50,25 @@
   transform: translate(60%, -10rem);
   transition: transform 0.2s linear;
 }
+.hot-item.hot-item-mobile {
+  display: none;
+}
 .hot-list:hover .hot-search-next {
   transform: translate(60%, -10rem) scale(1.6);
+}
+.hot-item-image {
+  width: 70%;
+  height: 20rem;
+}
+@media (max-width: 1024px) {
+  .hot-item {
+    --item-count: 4;
+    width: calc(100% / var(--item-count));
+  }
+  /* .hot-item {
+    display: none;
+  }
+  .hot-item.hot-item-mobile {
+    display: block;
+  } */
 }
